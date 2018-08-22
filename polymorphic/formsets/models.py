@@ -152,7 +152,7 @@ class BasePolymorphicModelFormSet(BaseModelFormSet):
         # Allow extra forms to be empty, unless they're part of
         # the minimum forms.
         if i >= self.initial_form_count() and i >= self.min_num:
-            defaults['empty_permitted'] = True
+            defaults['empty_permitted'] = False
         defaults.update(kwargs)
 
         # Need to find the model that will be displayed in this form.
